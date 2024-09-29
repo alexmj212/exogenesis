@@ -5,20 +5,18 @@
 </head>
 <body>
     <p>&nbsp;</p>
-
     <script>
         // Get the current URL path
         const path = window.location.pathname;
 
-        // Check if the path is "/twitch"
-        if (path === "/twitch") {
-            // Redirect to your Twitch page
-            window.location.replace('https://twitch.tv/exogenesis_');
-        } else {
-            // Redirect to your Linktree after 300ms
-            setTimeout(function() {
+        switch (path) {
+            case "/twitch":
+                // Redirect to Twitch
+                window.location.replace('https://twitch.tv/exogenesis');
+                break;
+            default:
+                // Redirect to your Linktree page by default
                 window.location.replace('https://linktr.ee/exogenesis_');
-            }, 300);
         }
     </script>
 </body>
